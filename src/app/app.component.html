@@ -6,18 +6,18 @@
   <!--The content below is only a placeholder and can be replaced.-->
 
   <div class="container form_div">
-    <div  class=" form_inner_div">
+    <div  class=" form_inner_div" style="margin-bottom: 30px;">
         <h2>Feel Safe</h2>
-        <form action="/action_page.php">
+        <form (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="email">Number of employees:</label>
-            <input type="email" class="form-control input_field form-control-plaintext" id="email" placeholder="Enter number of employees" name="email">
+            <input type="person" [(ngModel)]="model.person"  class="form-control input_field form-control-plaintext" id="email" placeholder="Enter number of employees" name="email">
           </div>
           <div class="form-group">
             <label for="pwd">Area in sq ft:</label>
-            <input type="password" class="form-control form_input_feild input_field form-control-plaintext" id="pwd" placeholder="Enter area in sq ft" name="pswd">
+            <input type="Area" [(ngModel)]="model.area"   class="form-control form_input_feild input_field form-control-plaintext" id="pwd" placeholder="Enter area in sq ft" name="pswd">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="pwd">Available plants:</label>
             <input type="password" class="form-control input_field form-control-plaintext" id="pwd" placeholder="Enter plants available" name="pswd">
           </div>
