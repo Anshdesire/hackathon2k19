@@ -1,0 +1,16 @@
+body{
+    background-image:url('../assets/images/background');
+    background-position: center center;
+   background-repeat:  no-repeat;
+   height: 650px;
+	background-attachment: fixed;
+			background-size:  cover;
+}
+
+.form_div{
+    width: 40%;
+    width: 40%;
+    float: left;
+    margin-left: 85px;
+    margin-top: 90px;
+}
