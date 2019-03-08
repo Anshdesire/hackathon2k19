@@ -8,45 +8,42 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'feelSafe';
   model: any = {};
-  names = [{
-    plant:'Bamboo',
-    quantity:2
-  ,},
-  {
-    plant:'Bamboo',
-    quantity:2
-  },
-  {
-    plant:'Bamboo',
-    quantity:2
-  },
-  {
-    plant:'Bamboo',
-    quantity:2
-  }]
+  names = [];
 
   constructor(){
- 
+
 }
+
 
   plants: any = [{
     plant: "Areca Palm",
-    absorptionRate: ''
+    absorptionRate: 0.003,
   },{
     plant: "Lady Palm",
-    absorptionRate: ''
+    absorptionRate: 0.009
   },{
     plant: "Bamboo palm",
-    absorptionRate: ''
+    absorptionRate: 0.022
   },{
     plant: "Rubber Plant",
-    absorptionRate: ''
+    absorptionRate: 0.024
   },{
     plant: 'Dracaena “Janet Craig”',
-    absorptionRate: ''
+    absorptionRate: 0.003
   }];
 
   onSubmit() {
-    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
+
+    this.names = this.plants.map( a => {
+      const vRoom = (this.model.area*2.4*1000);
+      const overAllEmission = this.model.person * 0.066; // co2 mole /kg
+      const vGas = overAllEmission* 8.314* 309 ;
+      const diff = vRoom - vGas;
+      // const no = Math.ceil(diff / (0.003*24*1000));
+      return {
+        ...a,
+        count: Math.ceil(vGas/(a.absorptionRate*24*1000))
+      }
+    })
   }
 }

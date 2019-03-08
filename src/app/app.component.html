@@ -20,7 +20,7 @@
           <!-- <div class="form-group">
             <label for="pwd">Available plants:</label>
             <input type="password" class="form-control input_field form-control-plaintext" id="pwd" placeholder="Enter plants available" name="pswd">
-          </div>
+          </div> -->
           <br />
           <button type="submit" class="btn btn-primary button_submit">Submit</button>
         </form>
@@ -28,15 +28,14 @@
 
     <div>
         <table>
-            <tr *ngFor="x in names">
-              <td>{{ x.plant }}</td>
-              <td>{{ x.quantity }}</td>
+            <tr *ngFor="let user of names">
+              <td>{{user.plant}}</td>
+              <td>{{user.count}}</td>
             </tr>
           </table>
     </div>
-   
+
   </div>
-<!-- Material form register -->
 
 </body>
 
