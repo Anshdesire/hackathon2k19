@@ -8,7 +8,7 @@
   <div class="container form_div">
     <div  class=" form_inner_div" style="margin-bottom: 30px;">
         <h2>Feel Safe</h2>
-        <form action="/action_page.php">
+        <form (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="area">Area:</label>
             <input type="Area" [(ngModel)]="model.area" class="form-control input_field form-control-plaintext" id="area" placeholder="Area" name="area">
