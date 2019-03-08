@@ -10,6 +10,23 @@ export class AppComponent {
 
   model: any = {};
 
+  plants: any = [{
+    plant: "Areca Palm",
+    absorptionRate: ''
+  },{
+    plant: "Lady Palm",
+    absorptionRate: ''
+  },{
+    plant: "Bamboo palm",
+    absorptionRate: ''
+  },{
+    plant: "Rubber Plant",
+    absorptionRate: ''
+  },{
+    plant: 'Dracaena “Janet Craig”',
+    absorptionRate: ''
+  }];
+
   onSubmit() {
     console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
   }
