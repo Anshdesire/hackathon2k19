@@ -9,26 +9,13 @@
     <h2>Feel Safe</h2>
     <form action="/action_page.php">
       <div class="form-group">
-        <label for="email">Number of employees:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Area:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        <label for="area">Area:</label>
+        <input type="area" [(ngModel)]="model.area" class="form-control" id="area" placeholder="Area" name="area">
         <label for="pwd">per sq ft</label>
       </div>
       <div class="form-group">
-        <label for="pwd">Available plants:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Shifts:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-      </div>
-      <div class="form-group form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
+        <label for="person">Number of Person:</label>
+        <input type="person" [(ngModel)]="model.person" class="form-control" id="person" placeholder="No of Person" name="person">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
