@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feelSafe';
+
+  model: any = {};
+
+  onSubmit() {
+    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
+  }
 }
