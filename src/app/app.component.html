@@ -11,28 +11,28 @@
         <form action="/action_page.php">
           <div class="form-group">
             <label for="email">Number of employees:</label>
-            <input type="email" class="form-control input_field form-control-plaintext" id="email" placeholder="Enter email" name="email">
+            <input type="email" class="form-control input_field form-control-plaintext" id="email" placeholder="Enter number of employees" name="email">
           </div>
           <div class="form-group">
             <label for="pwd">Area in sq ft:</label>
-            <input type="password" class="form-control input_field form-control-plaintext" id="pwd" placeholder="Enter password" name="pswd">
+            <input type="password" class="form-control form_input_feild input_field form-control-plaintext" id="pwd" placeholder="Enter area in sq ft" name="pswd">
           </div>
           <div class="form-group">
             <label for="pwd">Available plants:</label>
-            <input type="password" class="form-control input_field form-control-plaintext" id="pwd" placeholder="Enter password" name="pswd">
+            <input type="password" class="form-control input_field form-control-plaintext" id="pwd" placeholder="Enter plants available" name="pswd">
           </div>
-          <div class="dropdown">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link 1</a>
-                <a class="dropdown-item" href="#">Link 2</a>
-                <a class="dropdown-item" href="#">Link 3</a>
-              </div>
-            </div>
+          <br />
           <button type="submit" class="btn btn-primary button_submit">Submit</button>
         </form>
+    </div>
+
+    <div>
+        <table>
+            <tr *ngFor="x in names">
+              <td>{{ x.plant }}</td>
+              <td>{{ x.quantity }}</td>
+            </tr>
+          </table>
     </div>
    
   </div>

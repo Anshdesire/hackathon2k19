@@ -7,8 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feelSafe';
-
   model: any = {};
+  names = [{
+    plant:'Bamboo',
+    quantity:2
+  ,},
+  {
+    plant:'Bamboo',
+    quantity:2
+  },
+  {
+    plant:'Bamboo',
+    quantity:2
+  },
+  {
+    plant:'Bamboo',
+    quantity:2
+  }]
+
+  constructor(){
+ 
+}
 
   onSubmit() {
     console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))

@@ -41,6 +41,32 @@ input::placeholder {
 .form_inner_div{
 padding:50;
 }
+.form_input_feild{
+     background-color:rgba(82, 74, 74, 0.425);
+}
+
+.button_submit{
+    float:right;
+    margin-top:20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+.dropPadding{
+    margin-left: 16;
+}
 
 .input_field {
     background-color:rgba(82, 74, 74, 0.425);
