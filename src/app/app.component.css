@@ -18,15 +18,14 @@ label{
     font-family: cursive;
 }
 .form_div{
-    width: 40%;
-    float: left;
-    margin-left: 85px;
-    margin-top: 90px;
-    margin-bottom: 20px;
+    width: 100%;
     background-color:rgba(5, 5, 5, 0.205);
 
 }
-
+.table_div{
+    float:right;
+    margin-top: 50px
+}
 .btn-primary {
     color: #fff;
     background-color: green;
@@ -39,6 +38,9 @@ input::placeholder {
   }
 
 .form_inner_div{
+    width :40%;
+    float: left;
+
 padding:50;
 }
 .form_input_feild{

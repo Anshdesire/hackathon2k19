@@ -11,11 +11,11 @@
         <form (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="email">Number of employees:</label>
-            <input type="person" [(ngModel)]="model.person"  class="form-control input_field form-control-plaintext" id="email" placeholder="Enter number of employees" name="email">
+            <input required  type="person" [(ngModel)]="model.person"  class="form-control input_field form-control-plaintext" id="email" placeholder="Enter number of employees" name="email">
           </div>
           <div class="form-group">
             <label for="pwd">Area in sq ft:</label>
-            <input type="Area" [(ngModel)]="model.area"   class="form-control form_input_feild input_field form-control-plaintext" id="pwd" placeholder="Enter area in sq ft" name="pswd">
+            <input required type="Area" [(ngModel)]="model.area"   class="form-control form_input_feild input_field form-control-plaintext" id="pwd" placeholder="Enter area in sq ft" name="pswd">
           </div>
           <!-- <div class="form-group">
             <label for="pwd">Available plants:</label>
@@ -23,11 +23,18 @@
           </div> -->
           <br />
           <button type="submit" class="btn btn-primary button_submit">Submit</button>
+          <div class="form-group">
+              <label for="pwd">{{text}}</label>
+            </div>
         </form>
     </div>
 
-    <div>
+    <div *ngIf="submitPressed" class="table_div">
         <table>
+            <tr>
+                <th>Plant name</th>
+                <th>Number of plants required</th>
+            </tr>
             <tr *ngFor="let user of names">
               <td>{{user.plant}}</td>
               <td>{{user.count}}</td>
